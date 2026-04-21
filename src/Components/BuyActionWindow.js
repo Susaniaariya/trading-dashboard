@@ -10,7 +10,7 @@ const BuyActionWindow = ({ uid }) => {
   // 1. Add an error state
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { closeBuyWindow, isBuyMode, setIsBuyMode ,selectedPrice} =
+  const { closeBuyWindow, isBuyMode, setIsBuyMode, selectedPrice } =
     useContext(GeneralContext);
   useEffect(() => {
     setStockPrice(selectedPrice);
@@ -22,7 +22,7 @@ const BuyActionWindow = ({ uid }) => {
       return;
     }
 
-    const endpoint = "http://localhost:3002/newOrder"; // ✅ always use this
+    const endpoint = "https://sangini-e893.onrender.com/newOrder"; // ✅ always use this
 
     axios
       .post(

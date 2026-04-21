@@ -10,7 +10,7 @@ const Positions = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allPositions", {
+      .get("https://sangini-e893.onrender.com/allPositions", {
         headers: { Authorization: token },
       })
       .then((res) => setAllPositions(res.data))

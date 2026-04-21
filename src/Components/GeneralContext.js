@@ -22,7 +22,7 @@ export const GeneralContextProvider = (props) => {
   useEffect(() => {
     const fetchMarketPrices = () => {
       axios
-        .get("http://localhost:3002/allMarketPrices")
+        .get("https://sangini-e893.onrender.com/allMarketPrices")
         .then((res) => {
           setLiveWatchlist(res.data);
         })

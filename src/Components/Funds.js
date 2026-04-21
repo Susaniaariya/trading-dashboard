@@ -14,7 +14,9 @@ const Funds = () => {
     const fetchAll = () => {
       // Fetch wallet + quiz points
       axios
-        .get("http://localhost:3002/me", { headers: { Authorization: token } })
+        .get("https://sangini-e893.onrender.com/me", {
+          headers: { Authorization: token },
+        })
         .then(({ data }) => {
           setVirtualBalance(data.virtualBalance ?? 0);
           setQuizPoints(data.points ?? 0);
@@ -23,7 +25,7 @@ const Funds = () => {
 
       // Fetch holdings for invested value
       axios
-        .get("http://localhost:3002/allHoldings", {
+        .get("https://sangini-e893.onrender.com/allHoldings", {
           headers: { Authorization: token },
         })
         .then(({ data }) => {

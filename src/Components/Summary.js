@@ -13,14 +13,14 @@ const Summary = () => {
 
     // 1. Fetch Holdings
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get("https://sangini-e893.onrender.com/allHoldings", {
         headers: { Authorization: token },
       })
       .then((res) => setAllHoldings(res.data));
 
     // 2. Fetch User Profile for Balance
     axios
-      .get("http://localhost:3002/me", {
+      .get("https://sangini-e893.onrender.com/me", {
         headers: { Authorization: token },
       })
       .then((res) => {

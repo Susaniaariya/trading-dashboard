@@ -39,7 +39,7 @@ const Holdings = () => {
     const token = localStorage.getItem("token");
     const fetchHoldings = () => {
       axios
-        .get("http://localhost:3002/allHoldings", {
+        .get("https://sangini-e893.onrender.com/allHoldings", {
           headers: { Authorization: token },
         })
         .then((res) => {

@@ -31,7 +31,9 @@ const Menu = () => {
     }
 
     axios
-      .get("http://localhost:3002/me", { headers: { Authorization: token } })
+      .get("https://sangini-e893.onrender.com/me", {
+        headers: { Authorization: token },
+      })
       .then(({ data }) => {
         setUsername(data.username || "");
         setEmail(data.email || "");

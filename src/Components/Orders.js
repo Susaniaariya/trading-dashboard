@@ -8,7 +8,7 @@ const Orders = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allOrders", {
+      .get("https://sangini-e893.onrender.com/allOrders", {
         headers: { Authorization: token },
       })
       .then((res) => {
