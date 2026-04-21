@@ -1,0 +1,57 @@
+.positions-container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.title {
+  color: #444;
+  font-weight: 600;
+}
+
+.product-badge {
+  background-color: #f1f3f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.instrument-name {
+  font-weight: 600;
+  color: #ad1457;
+}
+
+.profit {
+  color: #4caf50 !important;
+  font-weight: 600;
+}
+
+.loss {
+  color: #f44336 !important;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px !important;
+  color: #999;
+}
+
+.btn-analytics {
+  background: none;
+  border: 1px solid #f8bbd0;
+  color: #ad1457;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}

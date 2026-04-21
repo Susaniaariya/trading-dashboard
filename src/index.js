@@ -1,0 +1,33 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./index.css";
+import Dashboard from "./Components/Dashboard";
+import { GeneralContextProvider } from "./Components/GeneralContext"; // ✅ import this
+
+const params = new URLSearchParams(window.location.search);
+const urlToken = params.get("token");
+if (urlToken) {
+  localStorage.setItem("token", urlToken);
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+
+const token = localStorage.getItem("token");
+if (!token) {
+  window.location.href = "http://localhost:3000/login";
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <GeneralContextProvider>
+        {" "}
+        {/* ✅ wrap everything here */}
+        <Routes>
+          <Route path="/*" element={<Dashboard />} />
+        </Routes>
+      </GeneralContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+);

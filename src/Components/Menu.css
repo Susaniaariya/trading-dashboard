@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Menu container: horizontal bar ── */
+.menu-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  position: relative;
+  background: transparent;
+  width: auto;
+  min-width: 0;
+}
+
+/* ── Logo ── */
+.menu-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+}
+.menu-logo-wrap img {
+  width: 32px;
+  height: auto;
+}
+.menu-logo-nepali {
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 0.7rem;
+  color: #c2185b;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+/* ── Nav links: horizontal row in centre ── */
+.menus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  padding: 0;
+  overflow: visible;
+}
+
+.menus ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.menus li {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* ── Nav link pills ── */
+.menu-nav-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #9e6070;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+}
+.menu-nav-link::before { display: none; }
+.menu-nav-link:hover {
+  background: rgba(233, 30, 99, 0.1);
+  color: #c2185b;
+}
+.menu-nav-link.active {
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.35);
+}
+.menu-nav-icon { font-size: 0.82rem; }
+
+/* ── Back to Terminal ── */
+.menu-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  width: auto;
+  margin-top: 0;
+}
+.menu-back-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.45);
+}
+
+/* ── Profile: right side ── */
+.profile {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.25rem 0.7rem 0.25rem 0.25rem !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1.5px solid #f8bbd0 !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+.profile:hover {
+  background: #fce4ec !important;
+}
+
+.avatar {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #e91e63, #c2185b) !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 6px rgba(233, 30, 99, 0.3) !important;
+  letter-spacing: 0.05em !important;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.profile-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3d1a24;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  margin: 0;
+}
+.profile-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  color: #ad5568;
+  margin: 0;
+}
+
+/* hide old static username */
+.username { display: none !important; }
+.menu-divider { display: none; }
+.menu-nepali-strip { display: none; }
+
+/* ── Dropdown ── */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  bottom: auto !important;
+  left: auto !important;
+  min-width: 160px;
+  background: #fff;
+  border: 1.5px solid #f8bbd0;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(233, 30, 99, 0.15);
+  overflow: hidden;
+  z-index: 999;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83rem;
+  color: #9e6070;
+  cursor: pointer;
+  transition: background 0.15s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+.dropdown-item:hover {
+  background: #fce4ec;
+  color: #c2185b;
+}
+.dropdown-item.logout {
+  color: #e91e63;
+  font-weight: 600;
+}
