@@ -5,6 +5,7 @@ import "./index.css";
 import Dashboard from "./Components/Dashboard";
 import { GeneralContextProvider } from "./Components/GeneralContext"; // ✅ import this
 
+// ✅ 1. FIRST: grab token from URL and save it
 const params = new URLSearchParams(window.location.search);
 const urlToken = params.get("token");
 if (urlToken) {
@@ -17,7 +18,6 @@ const token = localStorage.getItem("token");
 if (!token) {
   window.location.href = "https://sangini-frontend-tau.vercel.app/login";
 }
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
