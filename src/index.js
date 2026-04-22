@@ -12,6 +12,7 @@ if (urlToken) {
   window.history.replaceState({}, document.title, window.location.pathname);
 }
 
+// ✅ 2. THEN: check if token exists
 const token = localStorage.getItem("token");
 if (!token) {
   window.location.href = "https://sangini-frontend-tau.vercel.app/login";
