@@ -9,7 +9,7 @@ const Home = () => {
     if (token) {
       navigate("/dashboard");
     } else {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = " https://sangini-frontend-tau.vercel.app/login";
     }
   }, [navigate]);
 

@@ -18,7 +18,7 @@ const BuyActionWindow = ({ uid }) => {
   const handleOrderClick = () => {
     const token = localStorage.getItem("token");
     if (!token) {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://sangini-frontend-tau.vercel.app/login";
       return;
     }
 

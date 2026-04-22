@@ -70,7 +70,7 @@ const Funds = () => {
         <div style={{ display: "flex", gap: "8px" }}>
           <button
             onClick={() =>
-              (window.location.href = "http://localhost:3000/learn")
+              (window.location.href = "https://sangini-frontend-tau.vercel.app/learn")
             }
             style={{
               background: "linear-gradient(135deg,#e91e63,#c2185b)",
@@ -319,7 +319,7 @@ const Funds = () => {
             </p>
             <button
               onClick={() =>
-                (window.location.href = "http://localhost:3000/learn")
+                (window.location.href = "https://sangini-frontend-tau.vercel.app/learn")
               }
               style={{
                 background: "#e91e63",

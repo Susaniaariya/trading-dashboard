@@ -26,7 +26,7 @@ const Menu = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://sangini-frontend-tau.vercel.app/login";
       return;
     }
 
@@ -41,14 +41,14 @@ const Menu = () => {
       })
       .catch(() => {
         localStorage.removeItem("token");
-        window.location.href = "http://localhost:3000/login";
+        window.location.href = "https://sangini-frontend-tau.vercel.app/login";
       });
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "http://localhost:3000/login";
-  };
+        window.location.href = "https://sangini-frontend-tau.vercel.app/login";
+      };
 
   const initials = username
     ? username.slice(0, 2).toUpperCase()
@@ -111,7 +111,7 @@ const Menu = () => {
             <button
               className="menu-back-btn"
               onClick={() =>
-                (window.location.href = "http://localhost:3000/apps")
+                (window.location.href = "https://sangini-frontend-tau.vercel.app/apps")
               }
               style={{ marginTop: "15px", opacity: 0.7, cursor: "pointer" }}
             >
